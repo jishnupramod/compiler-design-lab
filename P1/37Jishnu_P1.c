@@ -46,9 +46,9 @@ int check_keyword(char word[]) {
 
 void check_id(char word[]) {
     int flag = 0;
-    if (isalpha(word[0])) {
+    if (isalpha(word[0]) || word[0] == '_') {
         for (int i=1; i<strlen(word); ++i) { 
-            if (!isalnum((char)word[i])) {
+            if (!isalnum((char)word[i]) && word[i] != '_') {
                 flag = 1;
                 break;
              }                   
